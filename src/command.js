@@ -1,6 +1,5 @@
 const sketch = require('sketch')
 const { DataSupplier } = sketch
-const util = require('util')
 
 const locale = currentLocale()
 
@@ -22,22 +21,22 @@ const timeFormats = {
 }
 
 export function onStartup () {
-  const date = new Date(currentYear(), 1, 5, 15, 30, 5)
   const names = new Set()
-  registerDataSupplier(true, dateFormats.dayMonthYear, 'SupplyDateDayMonthYear', date, names)
-  registerDataSupplier(true, dateFormats.dayMonthYearPadded, 'SupplyDateDayMonthYearPadded', date, names)
-  registerDataSupplier(true, dateFormats.dayShortMonthYear, 'SupplyDateDayShortMonthYear', date, names)
-  registerDataSupplier(true, dateFormats.dayMonth, 'SupplyDateDayMonth', date, names)
-  registerDataSupplier(true, dateFormats.dayMonthPadded, 'SupplyDateDayMonthPadded', date, names)
-  registerDataSupplier(true, dateFormats.dayShortMonth, 'SupplyDateDayShortMonth', date, names)
-  registerDataSupplier(true, dateFormats.dayLongMonth, 'SupplyDateDayLongMonth', date, names)
-  registerDataSupplier(true, dateFormats.dayLongMonthYear, 'SupplyDateDayLongMonthYear', date, names)
-  registerDataSupplier(false, timeFormats.hour12, 'SupplyTime12Hour', date, names)
-  registerDataSupplier(false, timeFormats.hour24, 'SupplyTime24Hour', date, names)
-  registerDataSupplier(false, timeFormats.hour24Seconds, 'SupplyTime24HourSeconds', date, names)
+  registerDataSupplier(true, dateFormats.dayMonthYear, 'SupplyDateDayMonthYear', names)
+  registerDataSupplier(true, dateFormats.dayMonthYearPadded, 'SupplyDateDayMonthYearPadded', names)
+  registerDataSupplier(true, dateFormats.dayShortMonthYear, 'SupplyDateDayShortMonthYear', names)
+  registerDataSupplier(true, dateFormats.dayMonth, 'SupplyDateDayMonth', names)
+  registerDataSupplier(true, dateFormats.dayMonthPadded, 'SupplyDateDayMonthPadded', names)
+  registerDataSupplier(true, dateFormats.dayShortMonth, 'SupplyDateDayShortMonth', names)
+  registerDataSupplier(true, dateFormats.dayLongMonth, 'SupplyDateDayLongMonth', names)
+  registerDataSupplier(true, dateFormats.dayLongMonthYear, 'SupplyDateDayLongMonthYear', names)
+  registerDataSupplier(false, timeFormats.hour12, 'SupplyTime12Hour', names)
+  registerDataSupplier(false, timeFormats.hour24, 'SupplyTime24Hour', names)
+  registerDataSupplier(false, timeFormats.hour24Seconds, 'SupplyTime24HourSeconds', names)
 }
 
-function registerDataSupplier(isDate, format, action, date, names) {
+function registerDataSupplier(isDate, format, action, names) {
+  const date = new Date(currentYear(), 1, 5, 15, 30, 5)
   const dateTimeString = isDate ? date.toLocaleDateString(locale, format) : date.toLocaleTimeString(locale, format)
   const prefix = isDate ? 'Date' : 'Time'
   const name = `${prefix}: ${dateTimeString}`
@@ -98,20 +97,20 @@ export function onSupplyTime24HourSeconds(context) {
 
 function supplyDate(format, context) {
   const dataKey = context.data.key
-  const items = util.toArray(context.data.items).map(sketch.fromNative)
-  items.forEach((item, index) => {
+  const dataCount = context.data.requestedCount
+  for (let i = 0; i < dataCount; i++) {
     const dateString = randomDate().toLocaleDateString(locale, format)
-    DataSupplier.supplyDataAtIndex(dataKey, dateString, index)
-  })
+    DataSupplier.supplyDataAtIndex(dataKey, dateString, i)
+  }
 }
 
 function supplyTime(format, context) {
   const dataKey = context.data.key
-  const items = util.toArray(context.data.items).map(sketch.fromNative)
-  items.forEach((item, index) => {
+  const dataCount = context.data.requestedCount
+  for (let i = 0; i < dataCount; i++) {
     const timeString = randomTime().toLocaleTimeString(locale, format)
-    DataSupplier.supplyDataAtIndex(dataKey, timeString, index)
-  })
+    DataSupplier.supplyDataAtIndex(dataKey, timeString, i)
+  }
 }
 
 function randomDate() {
