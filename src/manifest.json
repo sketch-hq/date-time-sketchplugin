@@ -11,10 +11,16 @@
           "Startup": "onStartup",
           "Shutdown": "onShutdown",
           "SupplyDateDayMonthYear": "onSupplyDateDayMonthYear",
+          "SupplyDateDayMonthYearPadded": "onSupplyDateDayMonthYearPadded",
+          "SupplyDateDayShortMonthYear": "onSupplyDateDayShortMonthYear",
           "SupplyDateDayShortMonth": "onSupplyDateDayShortMonth",
           "SupplyDateDayMonth": "onSupplyDateDayMonth",
+          "SupplyDateDayMonthPadded": "onSupplyDateDayMonthPadded",
+          "SupplyDateDayLongMonth": "onSupplyDateDayLongMonth",
+          "SupplyDateDayLongMonthYear": "onSupplyDateDayLongMonthYear",
           "SupplyTime12Hour": "onSupplyTime12Hour",
-          "SupplyTime24Hour": "onSupplyTime24Hour"
+          "SupplyTime24Hour": "onSupplyTime24Hour",
+          "SupplyTime24HourSeconds": "onSupplyTime24HourSeconds"
         }
       }
     }
