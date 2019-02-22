@@ -3,6 +3,7 @@
   "bundleVersion": 1,
   "icon": "icon.png",
   "suppliesData": true,
+  "identifier": "com.sketchapp.data-date-time",
   "commands": [
     {
       "script": "command.js",
@@ -24,8 +25,5 @@
         }
       }
     }
-  ],
-  "menu": {
-    "title": "Date & Time"
-  }
+  ]
 }
