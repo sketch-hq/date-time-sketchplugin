@@ -9,6 +9,6 @@ npm-debug.log
 # mac
 .DS_Store
 
-# IDE
+# WebStorm
 .idea
 *.iml

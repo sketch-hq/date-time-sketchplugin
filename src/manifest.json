@@ -4,6 +4,7 @@
   "icon": "icon.png",
   "suppliesData": true,
   "identifier": "com.sketchapp.data-date-time",
+  "description": "A data plugin that generates random dates and times",
   "commands": [
     {
       "script": "command.js",
