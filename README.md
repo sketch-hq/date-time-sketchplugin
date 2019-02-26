@@ -1,16 +1,18 @@
 # data-date-time
 
-A data plugin that generates random dates and times.
+[Sketch](https://sketchapp.com) data plugin that generates random dates and
+times.
 
 ## Installation
 
 ### From a release (simplest)
 
-- [Download](https://github.com/skpm/data-date-time/releases/latest) the latest release of the plugin
-- Un-zip
-- Double-click on `data-date-time.sketchplugin`
+- [Download](https://github.com/skpm/data-date-time/releases/latest) the latest
+release of the plugin
+- Double-click the .zip archive file to extract the plugin
+- Double-click the `data-date-time.sketchplugin` to install the plugin
 
-### From the sources
+### From source
 
 - Clone the repo
 - Install the dependencies with `npm install`
@@ -19,10 +21,8 @@ A data plugin that generates random dates and times.
 
 - Select one or more text layers.
 - Click on the Data button in the top left of the document's toolbar.
-- Under `Text`, select `Date & Time` and then select a date or time format to generate. 
+- Under _Text_, select _Date & Time_ and then select a date or time format to
+  generate.
 
-The date or time is localized to your current language and region system settings. 
-
-## License
-
-MIT
+The date or time is localized to your current language and region system
+settings.
