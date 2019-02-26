@@ -3,7 +3,7 @@
 [Sketch](https://sketchapp.com) data plugin that generates random dates and
 times.
 
-<img src="https://user-images.githubusercontent.com/1472553/53434453-91a4b100-39ee-11e9-9cc5-29c70ed8326b.gif" alt="Screencast">
+<img src="https://user-images.githubusercontent.com/1472553/53435993-fe6d7a80-39f1-11e9-8e89-0407d5a5b391.gif" alt="Screencast">
 
 ## Installation
 
