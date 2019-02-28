@@ -22,7 +22,7 @@
   "repository": {
     "url": "https://github.com/skpm/data-date-time"
   },
-  "author": "Bohemian Coding",
+  "author": "Sketch",
   "license": "MIT",
   "devDependencies": {
     "@skpm/builder": "^0.5.2"
