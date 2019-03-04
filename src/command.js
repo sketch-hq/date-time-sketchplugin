@@ -36,15 +36,18 @@ export function onStartup () {
 }
 
 function registerDataSupplier(isDate, format, action, names) {
-  const date = new Date(currentYear(), 1, 5, 15, 30, 5)
-  const dateTimeString = isDate ? date.toLocaleDateString(locale, format) : date.toLocaleTimeString(locale, format)
-  const prefix = isDate ? 'Date' : 'Time'
-  const name = `${prefix}: ${dateTimeString}`
-  // In some locales numbers will always be padded so we want to avoid duplicates
-  if (!names.has(name)) {
-    DataSupplier.registerDataSupplier('public.text', name, action)
-    names.add(name)
-  }
+  // Sketch was officially released on 7 Sep 2010 19:13:21
+  // https://web.archive.org/web/20110711124304/http://www.bohemiancoding.com/about/blog/feed/
+  const date = new Date(2010, 8, 7, 19, 13, 21)
+  const name = isDate ? 
+                `Date: ${date.toLocaleDateString(locale, format)}` : 
+                `Time: ${date.toLocaleTimeString(locale, format)}`
+
+  // Some locales numbers always use padded format, avoid duplicates
+  if (names.has(name)) return
+
+  DataSupplier.registerDataSupplier('public.text', name, action)
+  names.add(name)
 }
 
 export function onShutdown () {
