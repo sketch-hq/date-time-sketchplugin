@@ -1,6 +1,6 @@
-# data-date-time
+# Date and Time Data Plugin
 
-[Sketch](https://sketchapp.com) data plugin that generates random dates and
+[Sketch](https://sketch.com) data plugin that generates random dates and
 times.
 
 <img src="https://user-images.githubusercontent.com/1472553/53435993-fe6d7a80-39f1-11e9-8e89-0407d5a5b391.gif" alt="Screencast">
@@ -28,4 +28,4 @@ release of the plugin
 - Press _SHIFT + COMMAND + D_ to get another random date or time.
 
 The date or time is localized to your current language and region system
-settings e.g. in the US the date will be in the format _month/day/year_ while in Europe it will be in the format _day/month/year_.  
+settings e.g. in the US the date will be in the format _month/day/year_ while in Europe it will be in the format _day/month/year_.

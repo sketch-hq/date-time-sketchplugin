@@ -1,5 +1,5 @@
 {
-  "name": "data-date-time",
+  "name": "date-time",
   "version": "1.0.1",
   "description": "A data plugin that generates random dates and times",
   "engines": {
@@ -8,7 +8,7 @@
   "skpm": {
     "name": "Date & Time",
     "manifest": "src/manifest.json",
-    "main": "data-date-time.sketchplugin",
+    "main": "date-time.sketchplugin",
     "assets": [
       "assets/**/*"
     ]
@@ -20,7 +20,7 @@
     "postinstall": "npm run build && skpm-link"
   },
   "repository": {
-    "url": "https://github.com/skpm/data-date-time"
+    "url": "https://github.com/skpm/date-time-sketchplugin"
   },
   "author": "Sketch",
   "license": "MIT",
