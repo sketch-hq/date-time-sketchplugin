@@ -20,7 +20,7 @@
     "postinstall": "npm run build && skpm-link"
   },
   "repository": {
-    "url": "https://github.com/skpm/date-time-sketchplugin"
+    "url": "https://github.com/BohemianCoding/date-time-sketchplugin"
   },
   "author": "Sketch",
   "license": "MIT",
