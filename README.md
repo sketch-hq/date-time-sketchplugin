@@ -12,7 +12,7 @@ times.
 - [Download](https://github.com/BohemianCoding/date-time-sketchplugin/releases/latest) the latest
   release of the plugin
 - Double-click the .zip archive file to extract the plugin
-- Double-click the `data-date-time.sketchplugin` to install the plugin
+- Double-click the `date-time.sketchplugin` to install the plugin
 
 ### From source
 
