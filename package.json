@@ -25,6 +25,6 @@
   "author": "Sketch",
   "license": "MIT",
   "devDependencies": {
-    "@skpm/builder": "^0.7.0"
+    "@skpm/builder": "^0.7.11"
   }
 }
