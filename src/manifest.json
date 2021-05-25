@@ -1,6 +1,7 @@
 {
   "compatibleVersion": 3,
   "bundleVersion": 1,
+  "name": "Date and Time Data Plugin",
   "icon": "icon.png",
   "suppliesData": true,
   "identifier": "com.sketchapp.data-date-time",
