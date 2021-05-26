@@ -1,6 +1,6 @@
 {
   "name": "date-time",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A data plugin that generates random dates and times",
   "engines": {
     "sketch": ">=3.0"
